@@ -165,6 +165,12 @@ end;
 
 procedure TForm1.btnSaveClick(Sender: TObject);
 begin
+  if SavePictureDialog1.Execute then
+  begin
+    Image4.Picture.SaveToFile(SavePictureDialog1.FileName);
+
+    ShowMessage('Batik pattern saved successfully');
+  end;
 end;
 
 procedure TForm1.Grayscale(functionGray: Byte);
@@ -198,7 +204,6 @@ procedure TForm1.Biner1();
 var
   x, y: Integer;
   functionGray: Byte;
-  functionInvers: Byte;
 begin
   functionGray := 1;
   Grayscale(functionGray);
@@ -309,17 +314,17 @@ var
   index_x, index_y: Integer;
   filterR, filterG, filterB: Double;
 begin
-  for y:=0 to Image3.Height do
+  for y:=0 to Image3.Height-1 do
   begin
-    for x:=0 to Image3.Width do
+    for x:=0 to Image3.Width-1 do
     begin
       filterR := 0;
       filterG := 0;
       filterB := 0;
 
-      for i:=1 to 3 do
+      for j:=1 to 3 do
       begin
-        for j:=1 to 3 do
+        for i:=1 to 3 do
         begin
           index_x := x - (i - 2);
           index_y := y - (j - 2);
@@ -344,9 +349,9 @@ begin
             index_y := Image3.Height-1;
           end;
 
-          filterR := filterR + T.bitmapR[x,y] * kernel[i,j];
-          filterG := filterG + T.bitmapG[x,y] * kernel[i,j];
-          filterB := filterB + T.bitmapB[x,y] * kernel[i,j];
+          filterR := filterR + T.bitmapR[index_x, index_y] * kernel[i,j];
+          filterG := filterG + T.bitmapG[index_x, index_y] * kernel[i,j];
+          filterB := filterB + T.bitmapB[index_x, index_y] * kernel[i,j];
         end;
       end;
 
@@ -400,17 +405,17 @@ var
   index_x, index_y: Integer;
   filterR, filterG, filterB: Double;
 begin
-  for y:=0 to Image3.Height do
+  for y:=0 to Image3.Height-1 do
   begin
-    for x:=0 to Image3.Width do
+    for x:=0 to Image3.Width-1 do
     begin
       filterR := 0;
       filterG := 0;
       filterB := 0;
 
-      for i:=1 to 3 do
+      for j:=1 to 3 do
       begin
-        for j:=1 to 3 do
+        for i:=1 to 3 do
         begin
           index_x := x - (i - 2);
           index_y := y - (j - 2);
@@ -435,9 +440,9 @@ begin
             index_y := Image3.Height-1;
           end;
 
-          filterR := filterR + SM.bitmapFilterR[x,y] * kernel[i,j];
-          filterG := filterG + SM.bitmapFilterG[x,y] * kernel[i,j];
-          filterB := filterB + SM.bitmapFilterB[x,y] * kernel[i,j];
+          filterR := filterR + SM.bitmapFilterR[index_x, index_y] * kernel[i,j];
+          filterG := filterG + SM.bitmapFilterG[index_x, index_y] * kernel[i,j];
+          filterB := filterB + SM.bitmapFilterB[index_x, index_y] * kernel[i,j];
         end;
       end;
 
@@ -572,18 +577,19 @@ var
 begin
   Flower();
   Snowflake();
+  Texture();
   Arithmetic();
 
   Image4.Height := Image1.Height;
   Image4.Width := Image1.Width;
 
-  for y:=0 to Image1.Height-1 do
+  for y:=0 to Image4.Height-1 do
   begin
-    for x:=0 to Image1.Height-1 do
+    for x:=0 to Image4.Height-1 do
     begin
       if Arith.bitmapBiner3[x,y] then
       begin
-        Image4.Canvas.Pixels[x,y] := RGB(T.bitmapR[x,y], T.bitmapG[x,y], T.bitmapB[x,y]);
+        Image4.Canvas.Pixels[x,y] := RGB(SH.bitmapFilterR[x,y], SH.bitmapFilterG[x,y], SH.bitmapFilterB[x,y]);
       end
       else
       begin
