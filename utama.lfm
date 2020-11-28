@@ -1,0 +1,95 @@
+object Form1: TForm1
+  Left = 268
+  Height = 532
+  Top = 84
+  Width = 848
+  Caption = 'Form1'
+  ClientHeight = 532
+  ClientWidth = 848
+  LCLVersion = '2.0.6.0'
+  object Image1: TImage
+    Left = 96
+    Height = 90
+    Top = 80
+    Width = 96
+  end
+  object btnPattern1: TButton
+    Left = 96
+    Height = 25
+    Top = 32
+    Width = 96
+    Caption = 'Load Pattern 1'
+    OnClick = btnPattern1Click
+    TabOrder = 0
+  end
+  object Image2: TImage
+    Left = 360
+    Height = 90
+    Top = 80
+    Width = 98
+  end
+  object btnPattern2: TButton
+    Left = 360
+    Height = 25
+    Top = 32
+    Width = 96
+    Caption = 'Load Pattern 2'
+    OnClick = btnPattern2Click
+    TabOrder = 1
+  end
+  object btnTexture: TButton
+    Left = 624
+    Height = 25
+    Top = 32
+    Width = 98
+    Caption = 'Load Texture'
+    OnClick = btnTextureClick
+    TabOrder = 2
+  end
+  object Image3: TImage
+    Left = 624
+    Height = 90
+    Top = 80
+    Width = 98
+  end
+  object Image4: TImage
+    Left = 360
+    Height = 90
+    Top = 368
+    Width = 98
+  end
+  object btnGenerate: TButton
+    Left = 264
+    Height = 25
+    Top = 328
+    Width = 96
+    Caption = 'Generate Batik'
+    OnClick = btnGenerateClick
+    TabOrder = 3
+  end
+  object btnSave: TButton
+    Left = 456
+    Height = 25
+    Top = 328
+    Width = 96
+    Caption = 'Save Batik'
+    OnClick = btnSaveClick
+    TabOrder = 4
+  end
+  object OpenPictureDialog1: TOpenPictureDialog
+    left = 608
+    top = 320
+  end
+  object OpenPictureDialog2: TOpenPictureDialog
+    left = 760
+    top = 320
+  end
+  object OpenPictureDialog3: TOpenPictureDialog
+    left = 608
+    top = 400
+  end
+  object SavePictureDialog1: TSavePictureDialog
+    left = 760
+    top = 400
+  end
+end

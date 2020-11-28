@@ -1,0 +1,9 @@
+snowflake -> low pass, deteksi tepi (no invers), morfologi, invers
+
+flower -> grayscale, biner, invers
+
+snowflake + flower -> aritmatika
+
+
+183-192
+

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="2">
+      <Unit0>
+        <Filename Value="batik_pattern.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="24"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="utama.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="216"/>
+        <CursorPos X="31" Y="224"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+    </Units>
+    <JumpHistory Count="10" HistoryIndex="9">
+      <Position1>
+        <Filename Value="utama.pas"/>
+      </Position1>
+      <Position2>
+        <Filename Value="utama.pas"/>
+        <Caret Line="60" TopLine="44"/>
+      </Position2>
+      <Position3>
+        <Filename Value="utama.pas"/>
+        <Caret Line="64" Column="3" TopLine="49"/>
+      </Position3>
+      <Position4>
+        <Filename Value="utama.pas"/>
+        <Caret Line="75" Column="3" TopLine="59"/>
+      </Position4>
+      <Position5>
+        <Filename Value="utama.pas"/>
+        <Caret Line="74" Column="14" TopLine="62"/>
+      </Position5>
+      <Position6>
+        <Filename Value="utama.pas"/>
+        <Caret Line="125" Column="5" TopLine="102"/>
+      </Position6>
+      <Position7>
+        <Filename Value="utama.pas"/>
+        <Caret Line="182" Column="5" TopLine="166"/>
+      </Position7>
+      <Position8>
+        <Filename Value="utama.pas"/>
+        <Caret Line="315" Column="16" TopLine="306"/>
+      </Position8>
+      <Position9>
+        <Filename Value="utama.pas"/>
+        <Caret Line="365" Column="33" TopLine="355"/>
+      </Position9>
+      <Position10>
+        <Filename Value="utama.pas"/>
+        <Caret Line="105" Column="18" TopLine="96"/>
+      </Position10>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
