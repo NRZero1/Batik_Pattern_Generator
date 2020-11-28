@@ -164,8 +164,6 @@ begin
 end;
 
 procedure TForm1.btnSaveClick(Sender: TObject);
-var
-  x, y: Integer;
 begin
   if SavePictureDialog1.Execute then
   begin
@@ -206,7 +204,6 @@ procedure TForm1.Biner1();
 var
   x, y: Integer;
   functionGray: Byte;
-  functionInvers: Byte;
 begin
   functionGray := 1;
   Grayscale(functionGray);

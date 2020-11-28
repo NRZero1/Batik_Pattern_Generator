@@ -75,8 +75,6 @@ var
     gray: array[0..1000, 0..1000] of Byte;
     bitmapBiner: array[0..1000, 0..1000] of Boolean;
     bitmapBiner2: array[0..1000, 0..1000] of Boolean;
-    bitmapBinerColor: array[0..1000, 0..1000] of Byte;
-    invers: array[0..1000, 0..1000] of Byte;
   end;
 
   Snow:
